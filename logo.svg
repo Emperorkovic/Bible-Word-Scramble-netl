@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 60" width="280" height="60">
+  <ellipse cx="18" cy="30" rx="14" ry="7" fill="#4a7c28" opacity="0.3" transform="rotate(-30 18 30)"/>
+  <ellipse cx="262" cy="30" rx="14" ry="7" fill="#4a7c28" opacity="0.3" transform="rotate(30 262 30)"/>
+  <rect x="26" y="10" width="5" height="40" rx="2" fill="#c8961a"/>
+  <rect x="16" y="22" width="25" height="5" rx="2" fill="#c8961a"/>
+  <text x="58" y="26" font-family="Georgia, serif" font-size="20" font-weight="700" fill="#f5efd8" letter-spacing="1">BIBLE</text>
+  <circle cx="125" cy="20" r="2" fill="#c8961a"/>
+  <text x="133" y="26" font-family="Georgia, serif" font-size="20" font-weight="700" fill="#c8961a" letter-spacing="1">WORD</text>
+  <text x="58" y="46" font-family="Georgia, serif" font-size="14" font-weight="400" fill="#a8c48a" letter-spacing="4">SCRAMBLE</text>
+  <path d="M 248 15 Q 260 10 265 22 Q 255 18 248 15 Z" fill="#4a7c28" opacity="0.6"/>
+  <path d="M 250 20 Q 265 18 264 30 Q 256 24 250 20 Z" fill="#6b8f52" opacity="0.5"/>
+</svg>

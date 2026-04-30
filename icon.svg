@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 192">
+  <rect width="192" height="192" rx="30" fill="#2d5016"/>
+  <rect x="88" y="24" width="16" height="80" fill="#c8961a" rx="4"/>
+  <rect x="56" y="56" width="80" height="16" fill="#c8961a" rx="4"/>
+  <text x="96" y="155" text-anchor="middle" fill="#f5efd8" font-size="26" font-family="Georgia,serif" font-weight="bold">SCRAMBLE</text>
+</svg>

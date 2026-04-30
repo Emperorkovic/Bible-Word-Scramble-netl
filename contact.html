@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact – Bible Word Scramble</title>
+  <meta name="description" content="Get in touch with the Bible Word Scramble team. Word suggestions, feedback, prayer requests — we read every message.">
+  <meta name="theme-color" content="#2d5016">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <img src="logo.svg" alt="Bible Word Scramble" style="height:40px;">
+      </a>
+      <nav class="main-nav">
+        <a href="index.html">Play</a>
+        <a href="blog.html">Blog</a>
+        <a href="about.html">About</a>
+        <a href="contact.html" class="active">Contact</a>
+        <a href="privacy.html">Privacy</a>
+      </nav>
+      <button class="hamburger" id="hamburger">☰</button>
+    </div>
+    <div class="mobile-nav" id="mobileNav">
+      <a href="index.html">Play</a><a href="blog.html">Blog</a>
+      <a href="about.html">About</a><a href="contact.html">Contact</a><a href="privacy.html">Privacy</a>
+    </div>
+  </header>
+
+  <section class="page-hero">
+    <h1>✉ Contact Us</h1>
+    <p>We'd love to hear from you</p>
+  </section>
+
+  <div class="page-content">
+    <p>Have a word suggestion? Found a mistake? Want to share how the game has helped you? We read every message and would be grateful to hear from you.</p>
+
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:2rem; margin-bottom:2.5rem;" class="contact-grid">
+      <div>
+        <h2>Send a Message</h2>
+        <!-- Formspree form - messages go to intentionalgroupltd@gmail.com -->
+        <form class="contact-form" action="https://formspree.io/f/intentionalgroupltd@gmail.com" method="POST" id="contactForm">
+          <!-- Hidden honeypot for spam prevention -->
+          <input type="text" name="_gotcha" style="display:none">
+          <!-- Hidden redirect after submit -->
+          <input type="hidden" name="_subject" value="New message from Bible Word Scramble">
+
+          <div class="form-group">
+            <label for="name">Your Name *</label>
+            <input type="text" id="name" name="name" placeholder="e.g. Mary Smith" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address *</label>
+            <input type="email" id="email" name="email" placeholder="your@email.com" required />
+          </div>
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <select id="subject" name="subject">
+              <option value="">Choose a topic...</option>
+              <option>Word Suggestion</option>
+              <option>Bug Report</option>
+              <option>General Feedback</option>
+              <option>Prayer Request</option>
+              <option>Advertising Enquiry</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Message *</label>
+            <textarea id="message" name="message" placeholder="Your message here..." required></textarea>
+          </div>
+          <button type="submit" class="form-submit">Send Message 🙏</button>
+          <div id="formSuccess" style="display:none; margin-top:1rem; padding:1rem; background:rgba(45,122,45,0.1); border-left:3px solid var(--correct); border-radius:0 8px 8px 0; color:var(--correct);">
+            Thank you! Your message has been sent. We'll get back to you soon. God bless! ✝
+          </div>
+          <div id="formError" style="display:none; margin-top:1rem; padding:1rem; background:rgba(139,32,32,0.1); border-left:3px solid var(--wrong); border-radius:0 8px 8px 0; color:var(--wrong);">
+            Something went wrong. Please try again or email us directly.
+          </div>
+        </form>
+      </div>
+
+      <div>
+        <h2>Other Ways to Connect</h2>
+        <div style="margin-top:1rem;">
+          <div style="background:var(--parchment); border:1px solid var(--parchment-mid); border-radius:12px; padding:1.5rem; margin-bottom:1rem;">
+            <h3 style="margin-top:0;">📖 Word Suggestions</h3>
+            <p style="margin:0; font-size:0.9rem;">We're always adding new words! If you think a biblical word, place, or person is missing, let us know. We love community contributions.</p>
+          </div>
+          <div style="background:var(--parchment); border:1px solid var(--parchment-mid); border-radius:12px; padding:1.5rem; margin-bottom:1rem;">
+            <h3 style="margin-top:0;">🙏 Prayer Requests</h3>
+            <p style="margin:0; font-size:0.9rem;">We are a community of believers. If you'd like us to pray for you or a loved one, include your request in your message. We take this seriously.</p>
+          </div>
+          <div style="background:var(--parchment); border:1px solid var(--parchment-mid); border-radius:12px; padding:1.5rem;">
+            <h3 style="margin-top:0;">📢 Share the Game</h3>
+            <p style="margin:0; font-size:0.9rem;">The best way to support us is to share Bible Word Scramble with your church, small group, family, or friends. No cost, just joy! 🎉</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <blockquote style="border-left:4px solid var(--gold); padding:1rem 1.5rem; margin:2rem 0; background:rgba(200,150,26,0.07); border-radius:0 12px 12px 0; font-style:italic; color:var(--text-mid);">
+      "Let your speech always be gracious, seasoned with salt, so that you may know how you ought to answer each person." — Colossians 4:6
+    </blockquote>
+  </div>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-logo">
+        <img src="logo.svg" alt="Bible Word Scramble" style="height:36px; margin-bottom:0.5rem;">
+      </div>
+      <p class="footer-tagline">Growing in faith, one word at a time.</p>
+      <div class="footer-links">
+        <a href="about.html">About</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms &amp; Conditions</a>
+      </div>
+      <p class="footer-copy">© 2026 Intentional Group Ltd · Registered in England &amp; Wales · Company No. 17192121</p>
+    </div>
+  </footer>
+
+  <style>
+    @media (max-width: 650px) { .contact-grid { grid-template-columns: 1fr !important; } }
+  </style>
+
+  <script src="cookies.js"></script>
+  <script>
+    document.getElementById('hamburger').addEventListener('click', () => {
+      document.getElementById('mobileNav').classList.toggle('open');
+    });
+
+    // Formspree AJAX submission
+    const form = document.getElementById('contactForm');
+    form.addEventListener('submit', async function(e) {
+      e.preventDefault();
+      const submitBtn = form.querySelector('.form-submit');
+      submitBtn.textContent = 'Sending...';
+      submitBtn.disabled = true;
+      try {
+        const response = await fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { 'Accept': 'application/json' }
+        });
+        if (response.ok) {
+          document.getElementById('formSuccess').style.display = 'block';
+          document.getElementById('formError').style.display = 'none';
+          form.reset();
+          submitBtn.textContent = 'Sent! ✓';
+        } else {
+          throw new Error('Form submission failed');
+        }
+      } catch(err) {
+        document.getElementById('formError').style.display = 'block';
+        submitBtn.textContent = 'Send Message 🙏';
+        submitBtn.disabled = false;
+      }
+    });
+  </script>
+</body>
+</html>

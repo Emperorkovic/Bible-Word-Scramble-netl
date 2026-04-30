@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bible Word Scramble – Fun Scripture Word Games</title>
+  <meta name="description" content="Play Bible Word Scramble – a fun, free word game for all ages using scripture-inspired words. Test your Bible knowledge today!">
+  <meta name="theme-color" content="#2d5016">
+  <link rel="manifest" href="manifest.json">
+  <link rel="apple-touch-icon" href="icon-192.png">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Bible Word Scramble">
+  <meta property="og:description" content="Fun free word scramble game with 500+ Bible words!">
+  <meta property="og:type" content="website">
+
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- NAV -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <span class="logo-cross">✝</span>
+        <span class="logo-text">Bible Word Scramble</span>
+      </a>
+      <nav class="main-nav">
+        <a href="index.html" class="active">Play</a>
+        <a href="blog.html">Blog</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="privacy.html">Privacy</a>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="Menu">☰</button>
+    </div>
+    <div class="mobile-nav" id="mobileNav">
+      <a href="index.html">Play</a>
+      <a href="blog.html">Blog</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="privacy.html">Privacy</a>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="leaves"></div>
+    <div class="hero-content">
+      <p class="hero-sub">✦ Daily Word Challenge ✦</p>
+      <h1>Bible Word Scramble</h1>
+      <p class="hero-desc">Unscramble sacred words from Scripture. Sharpen your mind, deepen your faith.</p>
+    </div>
+  </section>
+
+  <!-- AD BANNER TOP -->
+  <div class="ad-slot ad-top">
+    <p>Advertisement</p>
+    <!-- Replace with your AdSense code -->
+    <!-- <ins class="adsbygoogle" ...></ins> -->
+  </div>
+
+  <!-- GAME SECTION -->
+  <main class="game-section">
+    <div class="game-controls">
+      <div class="difficulty-tabs">
+        <button class="diff-btn active" data-diff="easy">Easy</button>
+        <button class="diff-btn" data-diff="medium">Medium</button>
+        <button class="diff-btn" data-diff="hard">Hard</button>
+      </div>
+      <div class="category-tabs">
+        <button class="cat-btn active" data-cat="all">All Books</button>
+        <button class="cat-btn" data-cat="old">Old Testament</button>
+        <button class="cat-btn" data-cat="new">New Testament</button>
+        <button class="cat-btn" data-cat="people">People</button>
+        <button class="cat-btn" data-cat="places">Places</button>
+      </div>
+    </div>
+
+    <div class="score-bar">
+      <div class="score-item"><span class="score-label">Score</span><span id="score">0</span></div>
+      <div class="score-item"><span class="score-label">Streak</span><span id="streak">🔥 0</span></div>
+      <div class="score-item"><span class="score-label">Round</span><span id="round">1 / 10</span></div>
+      <div class="score-item timer-item"><span class="score-label">Time</span><span id="timer">30</span></div>
+    </div>
+
+    <div class="game-card" id="gameCard">
+      <div class="card-top">
+        <span class="category-badge" id="catBadge">Old Testament</span>
+        <span class="hint-text" id="hintText">Tap for hint</span>
+      </div>
+
+      <div class="scrambled-word" id="scrambledWord">LOADING</div>
+
+      <div class="hint-box hidden" id="hintBox">
+        <p id="hintContent"></p>
+      </div>
+
+      <div class="input-row">
+        <input type="text" id="answerInput" placeholder="Type your answer..." autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" />
+        <button class="submit-btn" id="submitBtn">Check ✓</button>
+      </div>
+
+      <div class="letter-tiles" id="letterTiles"></div>
+
+      <div class="action-row">
+        <button class="action-btn" id="hintBtn">💡 Hint (-5 pts)</button>
+        <button class="action-btn" id="skipBtn">⏭ Skip</button>
+        <button class="action-btn" id="shuffleBtn">🔀 Shuffle</button>
+      </div>
+
+      <div class="feedback" id="feedback"></div>
+    </div>
+
+    <div class="progress-bar-wrap"><div class="progress-bar" id="progressBar"></div></div>
+
+    <!-- End screen -->
+    <div class="end-screen hidden" id="endScreen">
+      <div class="end-card">
+        <div class="end-icon">✝</div>
+        <h2>Round Complete!</h2>
+        <p id="endVerse"></p>
+        <div class="end-stats">
+          <div><span id="finalScore">0</span><small>Score</small></div>
+          <div><span id="finalCorrect">0</span><small>Correct</small></div>
+          <div><span id="finalStreak">0</span><small>Best Streak</small></div>
+        </div>
+        <button class="play-again-btn" id="playAgainBtn">Play Again 🙏</button>
+        <button class="share-btn" id="shareBtn">Share Score 📤</button>
+      </div>
+    </div>
+  </main>
+
+  <!-- AD BANNER MID -->
+  <div class="ad-slot ad-mid">
+    <p>Advertisement</p>
+  </div>
+
+  <!-- WORD OF THE DAY -->
+  <section class="word-of-day">
+    <h2>📖 Word of the Day</h2>
+    <div class="wod-card" id="wodCard">
+      <div class="wod-word" id="wodWord"></div>
+      <div class="wod-meaning" id="wodMeaning"></div>
+      <div class="wod-verse" id="wodVerse"></div>
+    </div>
+  </section>
+
+  <!-- LEADERBOARD -->
+  <section class="leaderboard-section">
+    <h2>🏆 Your Best Scores</h2>
+    <div class="leaderboard" id="leaderboard">
+      <p class="no-scores">Play a round to see your scores here!</p>
+    </div>
+  </section>
+
+  <!-- AD BANNER BOTTOM -->
+  <div class="ad-slot ad-bottom">
+    <p>Advertisement</p>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-logo"><img src="logo.svg" alt="Bible Word Scramble" style="height:36px; margin-bottom:0.5rem;"></div>
+      <p class="footer-tagline">Growing in faith, one word at a time.</p>
+      <div class="footer-links">
+        <a href="about.html">About</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+        <a href="privacy.html">Privacy Policy</a>
+      </div>
+      <p class="footer-copy">© 2026 Intentional Group Ltd · Registered in England &amp; Wales · Company No. 17192121</p>
+    </div>
+  </footer>
+
+  <script src="words.js"></script>
+  <script src="game.js"></script>
+  <script>
+    // PWA install prompt
+    let deferredPrompt;
+    window.addEventListener('beforeinstallprompt', (e) => {
+      e.preventDefault();
+      deferredPrompt = e;
+      const installBanner = document.createElement('div');
+      installBanner.className = 'install-banner';
+      installBanner.innerHTML = `<span>📱 Add to Home Screen for offline play!</span><button id="installBtn">Install Free</button><button id="dismissInstall">✕</button>`;
+      document.body.appendChild(installBanner);
+      document.getElementById('installBtn').onclick = () => { deferredPrompt.prompt(); installBanner.remove(); };
+      document.getElementById('dismissInstall').onclick = () => installBanner.remove();
+    });
+    // Register service worker
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('sw.js').catch(()=>{});
+    }
+  </script>
+<script src="cookies.js"></script>
+</body>
+</html>
