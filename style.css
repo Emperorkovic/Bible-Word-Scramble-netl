@@ -684,3 +684,17 @@ body {
 .perfect-score .end-stats span {
   color: var(--gold-light) !important;
 }
+.social-links {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  margin: 1rem 0;
+  flex-wrap: wrap;
+}
+.social-links a {
+  color: var(--sage-light);
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.2s;
+}
+.social-links a:hover { color: var(--gold-light); }
