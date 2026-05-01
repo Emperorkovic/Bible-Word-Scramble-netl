@@ -1,7 +1,7 @@
 {
   "name": "Bible Word Scramble",
   "short_name": "BibleScramble",
-  "description": "Fun free word scramble game with 500+ Bible words. Unscramble scripture words and grow in faith!",
+  "description": "Fun free word scramble game with 1000+ Bible words. Unscramble scripture words and grow in faith!",
   "start_url": "/index.html",
   "display": "standalone",
   "background_color": "#f5efd8",

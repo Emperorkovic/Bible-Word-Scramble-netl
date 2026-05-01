@@ -7,7 +7,7 @@ A complete, AdSense-ready Bible word scramble web app — installable as a PWA.
 - `index.html` — Main game page
 - `style.css` — All styling (nature/scripture theme)
 - `game.js` — Game logic
-- `words.js` — 500+ Bible word database
+- `words.js` — 1000+ Bible word database
 - `about.html` — About page (required for AdSense)
 - `contact.html` — Contact page (required for AdSense)
 - `privacy.html` — Privacy Policy (required for AdSense)
