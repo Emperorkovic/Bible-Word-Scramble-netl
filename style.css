@@ -620,3 +620,67 @@ body {
   .blog-grid { grid-template-columns: 1fr; }
 }
 .footer-legal { font-size: 0.75rem; color: var(--text-light); margin-top: 0.5rem; }
+
+/* ---- PERFECT SCORE ---- */
+@keyframes confettiFall {
+  0% { transform: translateY(-10px) rotate(0deg); opacity: 1; }
+  100% { transform: translateY(100vh) rotate(720deg); opacity: 0; }
+}
+
+.perfect-score {
+  background: linear-gradient(135deg, #1e3a0f 0%, #2d5016 50%, #1e3a0f 100%) !important;
+  border: 3px solid var(--gold) !important;
+  box-shadow: 0 0 40px rgba(200,150,26,0.5) !important;
+  animation: perfectGlow 2s ease-in-out infinite alternate;
+}
+
+@keyframes perfectGlow {
+  from { box-shadow: 0 0 20px rgba(200,150,26,0.3); }
+  to { box-shadow: 0 0 60px rgba(200,150,26,0.7); }
+}
+
+.perfect-score h2 {
+  color: var(--gold-light) !important;
+  font-size: 2rem !important;
+  animation: perfectPulse 1s ease-in-out infinite alternate;
+}
+
+@keyframes perfectPulse {
+  from { transform: scale(1); }
+  to { transform: scale(1.05); }
+}
+
+.perfect-score .end-icon {
+  font-size: 4rem !important;
+  animation: crownSpin 3s ease-in-out infinite;
+}
+
+@keyframes crownSpin {
+  0%,100% { transform: rotate(-10deg) scale(1); }
+  50% { transform: rotate(10deg) scale(1.2); }
+}
+
+.perfect-banner {
+  background: rgba(200,150,26,0.15);
+  border: 2px solid var(--gold);
+  border-radius: 12px;
+  padding: 1rem 1.5rem;
+  color: var(--gold-light);
+  font-family: 'Cinzel', serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  margin: 0.5rem 0 1.5rem;
+  line-height: 1.8;
+}
+
+.perfect-banner small {
+  color: var(--sage-light);
+  font-size: 0.85rem;
+  font-family: 'Lora', serif;
+  font-weight: 400;
+}
+
+.perfect-score .end-stats span {
+  color: var(--gold-light) !important;
+}

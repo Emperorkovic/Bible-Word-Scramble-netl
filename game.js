@@ -185,12 +185,53 @@ function endGame() {
   clearInterval(timerInterval);
   gameCard.classList.add('hidden');
   endScreen.classList.remove('hidden');
-  const verse = END_VERSES[Math.floor(Math.random() * END_VERSES.length)];
-  document.getElementById('endVerse').innerHTML = `"${verse.text}" <em>— ${verse.ref}</em>`;
+
+  const isPerfect = correctCount === totalRounds;
+  const endCard = document.querySelector('.end-card');
+
+  if (isPerfect) {
+    endCard.classList.add('perfect-score');
+    document.querySelector('.end-icon').textContent = '👑';
+    document.querySelector('.end-card h2').innerHTML = 'PERFECT SCORE! 🏆';
+    document.getElementById('endVerse').innerHTML = `
+      <div class="perfect-banner">
+        ⭐ 10/10 on ${currentDiff.toUpperCase()} mode! ⭐<br>
+        <small>Screenshot & share with #BibleWordScramble 📸</small>
+      </div>
+    `;
+    launchConfetti();
+  } else {
+    endCard.classList.remove('perfect-score');
+    document.querySelector('.end-icon').textContent = '✝';
+    document.querySelector('.end-card h2').textContent = 'Round Complete!';
+    const verse = END_VERSES[Math.floor(Math.random() * END_VERSES.length)];
+    document.getElementById('endVerse').innerHTML = `"${verse.text}" <em>— ${verse.ref}</em>`;
+  }
+
   document.getElementById('finalScore').textContent = score;
   document.getElementById('finalCorrect').textContent = correctCount + '/' + totalRounds;
   document.getElementById('finalStreak').textContent = bestStreak;
   saveScore(score, correctCount);
+}
+
+function launchConfetti() {
+  const colors = ['#c8961a', '#4a7c28', '#f5efd8', '#2d5016', '#e8b84b'];
+  for (let i = 0; i < 80; i++) {
+    const confetti = document.createElement('div');
+    confetti.style.cssText = `
+      position:fixed;top:-10px;
+      left:${Math.random() * 100}vw;
+      width:${6 + Math.random() * 8}px;
+      height:${6 + Math.random() * 8}px;
+      background:${colors[Math.floor(Math.random() * colors.length)]};
+      border-radius:${Math.random() > 0.5 ? '50%' : '2px'};
+      animation:confettiFall ${2 + Math.random() * 3}s ease-in forwards;
+      animation-delay:${Math.random() * 1.5}s;
+      z-index:9999;pointer-events:none;
+    `;
+    document.body.appendChild(confetti);
+    setTimeout(() => confetti.remove(), 5000);
+  }
 }
 
 function saveScore(sc, correct) {
