@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Free Downloads – Bible Word Scramble</title>
+  <meta name="description" content="Download free Bible resources — activity books, word guides, baby name guides and family game packs. All free from Bible Word Scramble.">
+  <meta name="theme-color" content="#2d5016">
+  <link rel="icon" type="image/svg+xml" href="icon.svg">
+  <link rel="apple-touch-icon" href="icon.svg">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .downloads-hero {
+      background: linear-gradient(135deg, var(--forest) 0%, var(--forest-mid) 100%);
+      padding: 3rem 1.5rem 2.5rem;
+      text-align: center;
+    }
+    .downloads-hero h1 {
+      font-family: 'Cinzel', serif;
+      font-size: clamp(1.8rem, 5vw, 2.8rem);
+      color: var(--parchment);
+      margin-bottom: 0.5rem;
+    }
+    .downloads-hero p {
+      color: var(--sage-light);
+      font-style: italic;
+    }
+    .downloads-grid {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 3rem 1.5rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+    .download-card {
+      background: var(--parchment);
+      border: 1px solid var(--parchment-mid);
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .download-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-deep);
+    }
+    .download-card-img {
+      height: 160px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 3.5rem;
+      position: relative;
+    }
+    .free-badge {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      background: var(--gold);
+      color: var(--forest);
+      font-family: 'Cinzel', serif;
+      font-size: 0.7rem;
+      font-weight: 700;
+      padding: 0.2rem 0.6rem;
+      border-radius: 20px;
+      letter-spacing: 0.05em;
+    }
+    .download-card-body {
+      padding: 1.25rem;
+    }
+    .download-tag {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--sage);
+      margin-bottom: 0.4rem;
+      font-family: 'Cinzel', serif;
+    }
+    .download-card h3 {
+      font-family: 'Cinzel', serif;
+      font-size: 1rem;
+      color: var(--forest);
+      margin-bottom: 0.5rem;
+      line-height: 1.4;
+    }
+    .download-card p {
+      font-size: 0.85rem;
+      color: var(--text-light);
+      line-height: 1.5;
+      margin-bottom: 1rem;
+    }
+    .download-btn {
+      display: block;
+      width: 100%;
+      padding: 0.75rem;
+      background: var(--forest-mid);
+      color: var(--parchment);
+      border: none;
+      border-radius: 10px;
+      font-family: 'Cinzel', serif;
+      font-size: 0.9rem;
+      font-weight: 700;
+      text-align: center;
+      text-decoration: none;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .download-btn:hover {
+      background: var(--forest);
+      color: var(--parchment);
+      text-decoration: none;
+    }
+    .download-btn.pink {
+      background: #c8506a;
+    }
+    .download-btn.pink:hover {
+      background: #a03050;
+    }
+    .download-btn.blue {
+      background: #2a6098;
+    }
+    .download-btn.blue:hover {
+      background: #1a4a7a;
+    }
+    .download-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 0.75rem;
+      padding-top: 0.75rem;
+      border-top: 1px solid var(--parchment-dark);
+      font-size: 0.75rem;
+      color: var(--text-light);
+    }
+    .also-available {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 1.5rem 3rem;
+    }
+    .also-available h2 {
+      font-family: 'Cinzel', serif;
+      color: var(--forest);
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+    .platform-links {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .platform-btn {
+      padding: 0.6rem 1.5rem;
+      border-radius: 10px;
+      border: 2px solid var(--parchment-mid);
+      background: white;
+      color: var(--text-mid);
+      text-decoration: none;
+      font-family: 'Lora', serif;
+      font-size: 0.9rem;
+      transition: all 0.2s;
+    }
+    .platform-btn:hover {
+      border-color: var(--forest-mid);
+      color: var(--forest);
+    }
+    .disclaimer {
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 0 1.5rem 3rem;
+      text-align: center;
+      font-size: 0.85rem;
+      color: var(--text-light);
+      font-style: italic;
+      line-height: 1.6;
+    }
+    @media (max-width: 600px) {
+      .downloads-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <img src="logo.svg" alt="Bible Word Scramble" style="height:40px;">
+      </a>
+      <nav class="main-nav">
+        <a href="index.html">Play</a>
+        <a href="blog.html">Blog</a>
+        <a href="downloads.html" class="active">Free Downloads</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <button class="hamburger" id="hamburger">☰</button>
+    </div>
+    <div class="mobile-nav" id="mobileNav">
+      <a href="index.html">Play</a>
+      <a href="blog.html">Blog</a>
+      <a href="downloads.html">Free Downloads</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="privacy.html">Privacy</a>
+    </div>
+  </header>
+
+  <section class="downloads-hero">
+    <h1>📥 Free Bible Resources</h1>
+    <p>Download free — no sign up required. God's Word, beautifully packaged.</p>
+  </section>
+
+  <div class="ad-slot ad-top"><p>Advertisement</p></div>
+
+  <div class="downloads-grid">
+
+    <!-- PDF 1 -->
+    <div class="download-card">
+      <div class="download-card-img" style="background: linear-gradient(135deg, #1e3a0f, #2d5016);">
+        📜
+        <span class="free-badge">FREE</span>
+      </div>
+      <div class="download-card-body">
+        <div class="download-tag">Scripture Study</div>
+        <h3>50 Bible Words Every Christian Should Know</h3>
+        <p>Meanings, origins and Scripture references for 50 foundational Bible words — with scramble challenges!</p>
+        <a href="50_bible_words_guide.pdf" download class="download-btn">⬇ Download Free PDF</a>
+        <div class="download-meta">
+          <span>📄 PDF · Adults & Teens</span>
+          <span>50 words</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- PDF 2 -->
+    <div class="download-card">
+      <div class="download-card-img" style="background: linear-gradient(135deg, #2d5016, #4a7c28);">
+        🌟
+        <span class="free-badge">FREE</span>
+      </div>
+      <div class="download-card-body">
+        <div class="download-tag">Kids Activity</div>
+        <h3>My Bible Adventure Activity Book</h3>
+        <p>Word scrambles, Bible trivia, fill-in-the-blanks and more! Perfect for children aged 5-12.</p>
+        <a href="bible_adventure_activity_book.pdf" download class="download-btn">⬇ Download Free PDF</a>
+        <div class="download-meta">
+          <span>📄 PDF · Ages 5-12</span>
+          <span>4 sections</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- PDF 3 -->
+    <div class="download-card">
+      <div class="download-card-img" style="background: linear-gradient(135deg, #1e3a0f, #c8961a);">
+        🏆
+        <span class="free-badge">FREE</span>
+      </div>
+      <div class="download-card-body">
+        <div class="download-tag">Family Activity</div>
+        <h3>Family Bible Game Night Pack</h3>
+        <p>3 rounds of scramble, trivia, Would You Rather and discussion starters. Score sheet included!</p>
+        <a href="family_bible_game_night.pdf" download class="download-btn">⬇ Download Free PDF</a>
+        <div class="download-meta">
+          <span>📄 PDF · All Ages</span>
+          <span>6 rounds</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- PDF 4 -->
+    <div class="download-card">
+      <div class="download-card-img" style="background: linear-gradient(135deg, #1a4a7a, #2a6098);">
+        ✦
+        <span class="free-badge">FREE</span>
+      </div>
+      <div class="download-card-body">
+        <div class="download-tag">Baby Names · Boys</div>
+        <h3>100 Biblical Baby Names for Boys</h3>
+        <p>Meanings, origins, Bible references and character traits for 100 beautiful Biblical boys names.</p>
+        <a href="100_biblical_baby_names_boys.pdf" download class="download-btn blue">⬇ Download Free PDF</a>
+        <div class="download-meta">
+          <span>📄 PDF · Expectant Parents</span>
+          <span>100 names</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- PDF 5 -->
+    <div class="download-card">
+      <div class="download-card-img" style="background: linear-gradient(135deg, #6b1a2a, #c8506a);">
+        🕊️
+        <span class="free-badge">FREE</span>
+      </div>
+      <div class="download-card-body">
+        <div class="download-tag">Baby Names · Girls</div>
+        <h3>100 Biblical Baby Names for Girls</h3>
+        <p>Meanings, origins, Bible references and character traits for 100 beautiful Biblical girls names.</p>
+        <a href="100_biblical_baby_names_girls.pdf" download class="download-btn pink">⬇ Download Free PDF</a>
+        <div class="download-meta">
+          <span>📄 PDF · Expectant Parents</span>
+          <span>100 names</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Also available on -->
+  <div class="also-available">
+    <h2>📚 Also Available As Printed Books</h2>
+    <p style="text-align:center; color:var(--text-light); margin-bottom:1.5rem; font-style:italic;">
+      Want a physical copy? Our books are available to order on Amazon.
+    </p>
+    <div class="platform-links">
+      <a href="https://www.amazon.co.uk" target="_blank" rel="noopener" class="platform-btn">📦 Amazon UK</a>
+      <a href="https://gumroad.com" target="_blank" rel="noopener" class="platform-btn">🛍 Gumroad</a>
+      <a href="https://payhip.com" target="_blank" rel="noopener" class="platform-btn">💛 Payhip</a>
+    </div>
+  </div>
+
+  <div class="disclaimer">
+    All resources are free for personal, educational and church use.
+    Please do not redistribute or sell these materials.
+    © 2026 Intentional Group Ltd · Registered in England & Wales · Company No. 17192121
+  </div>
+
+  <div class="ad-slot ad-bottom"><p>Advertisement</p></div>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-logo">
+        <img src="logo.svg" alt="Bible Word Scramble" style="height:36px; margin-bottom:0.5rem;">
+      </div>
+      <p class="footer-tagline">Growing in faith, one word at a time.</p>
+      <div class="footer-links">
+        <a href="about.html">About</a>
+        <a href="blog.html">Blog</a>
+        <a href="downloads.html">Free Downloads</a>
+        <a href="contact.html">Contact</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms &amp; Conditions</a>
+      </div>
+      <div class="social-links">
+        <a href="https://x.com/biblescramble" target="_blank" rel="noopener">𝕏 Follow us on X</a>
+        <a href="https://pinterest.com/biblewordscramble" target="_blank" rel="noopener">📌 Pinterest</a>
+      </div>
+      <p class="footer-copy">© 2026 Intentional Group Ltd · Registered in England &amp; Wales · Company No. 17192121</p>
+    </div>
+  </footer>
+
+  <script src="cookies.js"></script>
+  <script>
+    document.getElementById('hamburger').addEventListener('click', () => {
+      document.getElementById('mobileNav').classList.toggle('open');
+    });
+  </script>
+</body>
+</html>
